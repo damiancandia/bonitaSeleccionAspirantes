@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.15.0">
+    <businessObjects>
+        <businessObject qualifiedName="com.company.model.Adjudica">
+            <fields>
+                <relationField type="AGGREGATION" reference="com.company.model.Vivienda" fetchType="LAZY" name="casa" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Persona" fetchType="EAGER" name="aspirante" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fecha" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="codObra" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="barrioad" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="tinu" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nudo" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nudal" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="tipubi" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="ubica1" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="ubica2" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="escale" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="escalal" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="calle" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="numero" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="casalet" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="planta" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="deptoal" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="depnu" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="deptoma" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="manza" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="manzal" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="apellido" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="tipdoc" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nrodocu" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="apelli1" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="tipdoc1" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nrodocu1" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="fecaltaa" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="observa" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="rec" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Adjudicacion">
+            <fields>
+                <relationField type="AGGREGATION" reference="com.company.model.Vivienda" fetchType="LAZY" name="vivienda" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Persona" fetchType="EAGER" name="titulares" nullable="true" collection="true"/>
+                <field type="LONG" length="255" name="ingresos" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="cantidadMenores" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="cantidadMayores" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Expediente" fetchType="LAZY" name="expediente" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="rnroResolucion" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="anioResolucion" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fecha" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="estado" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Expediente">
+            <fields>
+                <field type="STRING" length="255" name="numero" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="anio" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="caratula" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="cuerpo" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="alcance" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="reparticion" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="tipoExpediente" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.GrupoFamiliar">
+            <fields>
+                <field type="STRING" length="255" name="attribute" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Localizacion">
+            <fields>
+                <relationField type="AGGREGATION" reference="com.company.model.Obra" fetchType="LAZY" name="obra" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="ubicacion" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Expediente" fetchType="EAGER" name="expediente" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="rec" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="codobra" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="codcas" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="c1" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nom_loc" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="c2" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="c3" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="c4" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="c7" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="carac" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="numero" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="anio" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="cuerpo" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="alc" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="concepto" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="descrip" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="estado" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="cod_loc" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nexp" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="direccion" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Obra">
+            <fields>
+                <field type="INTEGER" length="255" name="codObra" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="denominacion" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="cantidadViviendas" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Expediente" fetchType="EAGER" name="expediente" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Partido" fetchType="EAGER" name="partido" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="concepto" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="operatoria" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="localidad" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Partido">
+            <fields>
+                <field type="STRING" length="255" name="codigoCatastral" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nombre" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Persona">
+            <fields>
+                <field type="INTEGER" length="255" name="dni" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="apellido" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nombre" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaNacimiento" nullable="true" collection="false"/>
+                <field type="FLOAT" length="255" name="ingresos" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="esTitular" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Vivienda">
+            <fields>
+                <relationField type="AGGREGATION" reference="com.company.model.Localizacion" fetchType="LAZY" name="localizacion" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="documentacion" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="estado" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="codobra" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="barrioad" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="tinu" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nudo" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nudal" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="tipubi" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="ubica1" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="ubica2" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="escale" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="escalal" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="calle" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="numero" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="casalet" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="planta" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="deptoal" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="depnu" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="deptoma" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="manza" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="manzal" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="cantdor" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="ph" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="locali" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>
